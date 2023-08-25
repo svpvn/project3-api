@@ -1,0 +1,25 @@
+<html>
+
+<head>
+	<title>sendBill.html</title>
+</head>
+
+<body>
+	<h1>Xin chào <span th:text="${name}"></span> </h1>
+	<p>Đơn hàng của bạn:</p>
+	<tr>
+		<th>ProductID</th>
+		<th>Quantity</th>
+		<th>Price</th>
+	</tr>
+	<tr th:each ="b: ${billItems}">
+		<th th:text ="${b.product?.id}"></th>
+		<th th:text ="${b.quantity}"></th>
+		<th th:text ="${b.price}"></th>
+	</tr>
+
+	<p>Cảm ơn bạn đã lựa chọn sản phẩm của chúng tôi !</p>
+
+</body>
+
+</html>
